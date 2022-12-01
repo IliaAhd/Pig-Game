@@ -39,14 +39,15 @@ function reset() {
 }
 reset();
 
-function diceRoll() {
-  if (playing) {
-    dice = Math.trunc(Math.random() * 6) + 1;
-    diceEl.src = `dice-${dice}.png`;
-    diceEl.classList.remove('hidden');
-    console.log(dice);
-    score();
-  }
+function resetScore() {
+  currentScore = 0;
+  document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
+}
+
+function switchPlayer() {
+  activePlayer = activePlayer === 0 ? 1 : 0;
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
 }
 
 function score() {
@@ -59,15 +60,14 @@ function score() {
   }
 }
 
-function resetScore() {
-  currentScore = 0;
-  document.querySelector(`#current--${activePlayer}`).textContent = currentScore;
-}
-
-function switchPlayer() {
-  activePlayer = activePlayer === 0 ? 1 : 0;
-  player0El.classList.toggle('player--active');
-  player1El.classList.toggle('player--active');
+function diceRoll() {
+  if (playing) {
+    dice = Math.trunc(Math.random() * 6) + 1;
+    diceEl.src = `dice-${dice}.png`;
+    diceEl.classList.remove('hidden');
+    console.log(dice);
+    score();
+  }
 }
 
 function holdScore() {
