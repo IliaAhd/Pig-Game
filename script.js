@@ -88,12 +88,12 @@ function holdScore() {
 }
 
 function fPress(f) {
-  if (f.key === 'f' || f.key === 'F' && activePlayer === 0){
+  if (f.key === 'f' | f.key === 'F' && activePlayer === 0){
     diceRoll();
   }
 }
 function kPress(k) {
-  if (k.key === 'k' || k.key === 'K' && activePlayer === 1){
+  if (k.key === 'k' | k.key === 'K' && activePlayer === 1){
     diceRoll();
   }
 }
