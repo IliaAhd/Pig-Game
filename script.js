@@ -7,10 +7,13 @@ const score0El = document.querySelector('#score--0');
 const score1El = document.querySelector('#score--1');
 const current0El = document.querySelector('#current--0');
 const current1El = document.querySelector('#current--1');
+const modal = document.querySelector('.modal');
 
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const btnNew = document.querySelector('.btn--new');
+const btnQ = document.querySelector('.btn--q');
+const btnCloseModal = document.querySelector('.close-modal');
 
 let dice = Math.trunc(Math.random() * 6) + 1;
 let scores, currentScore, activePlayer, playing;
@@ -104,9 +107,15 @@ function holdPress(h) {
   }
 }
 
+function showModal() {
+  modal.classList.toggle('hidden');
+}
+
 btnRoll.addEventListener('click', diceRoll);
 btnHold.addEventListener('click', holdScore);
 btnNew.addEventListener('click', reset);
 document.addEventListener('keydown', fPress);
 document.addEventListener('keydown', kPress);
 document.addEventListener('keydown', holdPress);
+btnQ.addEventListener('click', showModal);
+btnCloseModal.addEventListener('click', showModal);
