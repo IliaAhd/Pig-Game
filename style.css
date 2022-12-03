@@ -172,14 +172,17 @@ main {
 
 .modal {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.87);
+  color: #0c0c0c;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0; left: 0;
   display: grid;
   place-items: center;
-  font-size: 8rem;
+  font-size: 2.3rem;
+  padding-inline: 8rem;
+  line-height: 3.8rem;
 }
 
 .modal .close-modal {

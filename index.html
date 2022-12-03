@@ -11,7 +11,7 @@
   <body>
     <main>
       <section class="player player--0 player--active">
-        <h2 class="name" id="name--0">Player f</h2>
+        <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">0</p>
         <div class="current">
           <p class="current-label current-label--0">Current</p>
@@ -19,7 +19,7 @@
         </div>
       </section>
       <section class="player player--1">
-        <h2 class="name" id="name--1">Player k</h2>
+        <h2 class="name" id="name--1">Player 2</h2>
         <p class="score" id="score--1">0</p>
         <div class="current">
           <p class="current-label current-label--1">Current</p>
@@ -35,7 +35,23 @@
       
       <div class="modal hidden">
         <span class="close-modal">❌</span>
-        <p></p>
+          <ul>
+            <li>
+              If rolled number is rather than 1, it is collected as the player's current score.
+            </li>
+            <li>
+              If number 1 is rolled, the player scores nothing and the player switches.
+            </li>
+            <li>
+              If the player holds their scores, they wouldn't lose the score.
+            </li>
+            <li>
+              Player wins who reach 100 points!
+            </li>
+          </ul>
+          <p>
+            Hint: use the <kbd>F</kbd> button as player 1 and <kbd>K</kbd> button as player 2 and also hold scores with the <kbd>H</kbd> or <kbd>Space</kbd> button.
+          </p>
         <strong>
           Made by <a href="https://github.com/IliaNoah" target="_blank">Ilia Noah</a>
         </strong>
