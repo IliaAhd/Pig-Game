@@ -85,6 +85,7 @@ function holdScore() {
 
     playing = false;
   } else {
+    diceEl.classList.add('hidden');
     resetScore();
     switchPlayer();
   }
