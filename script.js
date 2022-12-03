@@ -85,9 +85,11 @@ function holdScore() {
 
     playing = false;
   } else {
+    if (currentScore !== 0) {
     diceEl.classList.add('hidden');
     resetScore();
     switchPlayer();
+    }
   }
 }
 
